@@ -1,0 +1,96 @@
+{
+  "header.specialist": "Specialist",
+  "header.health_facilities": "Health facilities",
+  "header.doctor": "Doctor",
+  "header.examination_service": "Examination service",
+  "header_detail.specialist": "Find a doctor by specialty",
+  "header_detail.health_facilities": "Choose a hospital or clinic",
+  "header_detail.doctor": "choose a good doctor",
+  "header_detail.examination_service": "General health check",
+
+  "header.category": "Category",
+
+  "support": "Support",
+  "search.title": "MEDICAL BACKGROUND",
+  "search.subTitle": "HEALTH CARE FOR THE WHOLE PEOPLE",
+
+  "menu.home": "Home page",
+  "menu.handbook": "Handbook",
+  "menu.contact": "Contact",
+  "menu.role": "Role BookingCare",
+  "menu.frequentQuestion": "Frequently questions",
+  "menu.operatingRegulation": "Operating regulations",
+  "menu.login": "Login",
+
+  "searh_form.specialist": "Find a specialist",
+  "searh_form.hospital": "Find a hospital",
+  "searh_form.reason": "Find a reason for medical",
+  "searh_form.doctor": "Find a doctor",
+  "searh_form.clinic": "Find a clinic",
+
+  "search_suggest.specialist": "Specialist examination",
+  "search_suggest.medical": "Medical products",
+  "search_suggest.general": "General examination",
+  "search_suggest.dental": "Dental examination",
+  "search_suggest.surgery": "Surgery",
+  "search_suggest.mental": "Mental health",
+  "search_suggest.test": "Medical test",
+
+  "util.seeMore": "See more",
+  "util.find": "Find more",
+  "util.posts": "See all posts",
+
+  "system_header.user": "User manage",
+  "system_header.clinic": "Clinic",
+  "system_header.specialist": "Specialist",
+  "system_header.handbook": "Handbook",
+
+  "system_header.user.all": "All",
+  "system_header.user.doctor": "Manage doctor",
+  "system_header.user.patient": "Manage patient",
+  "system_header.user.admin": "Manage admin",
+  "system_header.user.schedule": "DoctorSchedule",
+
+  "system_header.helloUser": "Hello",
+
+  "system.createUser": "Create new user",
+  "system.editUser": "Edit user",
+  "system.save": "Save",
+  "system.clearAll": "Clear All",
+
+  "system.email": "Email",
+  "system.fullname": "Fullname",
+  "system.password": "Password",
+  "system.address": "Address",
+  "system.phonenumber": "Phone number",
+  "system.actions": "Actions",
+  "system.gender": "Gender",
+  "system.role": "Role",
+  "system.position": "Position",
+
+  "system.order": "Order",
+  "system.edit": "Edit",
+  "system.remove": "Remove",
+
+  "system.manage.user": "Manage user",
+  "system.manage.addUser": "Add new user",
+
+  "detailDoctor.schedule": "Examination Schedule",
+  "detailDoctor.bookFree": "Choose and book schedule free",
+
+  "systemManageDoctor.title": "Create more doctor information",
+  "systemManageDoctor.chooseDoctor": "Choose doctor",
+  "systemManageDoctor.introDoctor": "Information introduct",
+  "systemManageDoctor.price": "Choose price",
+  "systemManageDoctor.payment": "Choose method payment",
+  "systemManageDoctor.province": "Choose province",
+  "systemManageDoctor.nameClinic": "Name clinic",
+  "systemManageDoctor.addressClinic": "Address clinic",
+  "systemManageDoctor.note": "Note",
+  "systemManageDoctor.buttonSave": "Save information",
+
+  "doctorInfoEle.examinationPrice": "Examination price",
+  "doctorInfoEle.examinationAddress": "Examination address: ",
+  "doctorInfoEle.collapse": "Collapse",
+  "doctorInfoEle.seeDetails": "See details"
+}

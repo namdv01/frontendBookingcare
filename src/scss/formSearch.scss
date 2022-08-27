@@ -1,0 +1,29 @@
+@import "./constant.scss";
+.formSearch {
+  background-color: $yellow;
+  width: 24%;
+  min-width: 360px;
+  padding: 8px 16px;
+  margin: 48px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+
+  .borderSearch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    input {
+      min-width: 200px;
+      outline: none;
+      font-size: 20px;
+      background-color: $yellow;
+      border: none;
+      padding: 4px;
+      margin-left: 20px;
+    }
+  }
+}

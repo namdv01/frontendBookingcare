@@ -1,0 +1,78 @@
+@import "./constant.scss";
+
+.detailScheduleTime {
+  margin: 20px;
+  // background-color: red;
+  width: 50%;
+  border-right: 3px solid $greyLight;
+
+  select {
+    padding: 8px 10px;
+    margin-left: 16px;
+    min-width: 120px;
+  }
+
+  .tableSchedule {
+    .title {
+      padding: 0;
+      margin: 16px;
+
+      span {
+        font-size: 20px;
+        padding-left: 20px;
+      }
+    }
+
+    .times {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      margin-right: 16px;
+      .time {
+        background-color: $yellow;
+        padding: 12px 16px;
+        font-size: 14px;
+        width: 20%;
+        margin: 12px;
+        border: 2px solid $yellow;
+      }
+      .time:hover {
+        border-color: $superBlue;
+        cursor: pointer;
+        opacity: 0.8;
+      }
+      span {
+        color: $primary;
+        padding: 0 16px;
+      }
+    }
+  }
+  .bonus-free {
+    font-size: 14px;
+    margin-left: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .detailScheduleTime {
+    width: 80%;
+    border-right: none;
+    margin: 0;
+    // border-bottom: 3px solid $greyLight;
+    padding: 24px 10%;
+
+    .tableSchedule {
+      .times {
+        .time {
+          width: 30%;
+        }
+      }
+    }
+    .bonus-free {
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

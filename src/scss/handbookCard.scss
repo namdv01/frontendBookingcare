@@ -1,0 +1,70 @@
+@import "./constant.scss";
+
+.handbookCard {
+  display: flex;
+  flex-direction: row;
+  height: 180px;
+  width: 450px;
+  border: 1px solid $whiteDark;
+  margin: 0 auto;
+
+  img {
+    width: 60%;
+  }
+
+  .text {
+    width: 40%;
+    padding: 8px 4px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: $greyLight;
+    font-weight: bold;
+  }
+}
+
+.handbookCard:hover {
+  cursor: pointer;
+
+  .text {
+    color: $superBlue;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 992px) {
+  .handbookCard {
+    height: auto;
+    flex-direction: column;
+    width: 420px;
+
+    img {
+      width: 80%;
+    }
+
+    .text {
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .handbookCard {
+    flex-direction: column;
+    height: auto;
+    width: 360px;
+
+    img {
+      width: 90%;
+    }
+
+    .text {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .handbookCard {
+    height: 240px;
+    width: 420px;
+  }
+}

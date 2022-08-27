@@ -1,0 +1,94 @@
+@import "./constant.scss";
+
+.iconRemoveUser :hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.iconEditUser :hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.tableResponsive {
+  display: none;
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .tableResponsive {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+
+    .tableCellRow {
+      width: 42%;
+      margin: 24px 0;
+      padding: 16px 1%;
+      border: 10px solid $superBlue;
+      border-radius: 20px;
+
+      .tableCellRes {
+        margin: 8px 0 16px;
+        border-bottom: 1px solid $greyLight;
+
+        .title {
+          display: inline-block;
+          min-width: 120px;
+          font-weight: bold;
+        }
+      }
+
+      .tableCellRes:last-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .tableFull {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .tableResponsive {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .tableCellRow {
+      width: 90%;
+      margin: 24px auto;
+      padding: 16px 5%;
+      border: 10px solid $superBlue;
+      border-radius: 20px;
+
+      .tableCellRes {
+        margin: 8px 0 16px;
+        border-bottom: 1px solid $greyLight;
+
+        .title {
+          display: inline-block;
+          min-width: 110px;
+          font-weight: bold;
+        }
+      }
+
+      .tableCellRes:last-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .tableFull {
+    display: none;
+  }
+}

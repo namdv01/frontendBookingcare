@@ -1,0 +1,56 @@
+@import "./constant.scss";
+
+.doctorDetailContainer {
+  width: 100%;
+  .title {
+    padding: 12px 10%;
+    display: flex;
+    flex-direction: row;
+
+    .img {
+      width: 200px;
+      margin-right: 16px;
+
+      img {
+        width: 100%;
+
+        border-radius: 50%;
+        border: 1px solid black;
+      }
+    }
+
+    .name {
+      width: 70%;
+
+      h3 {
+        font-size: 20px;
+      }
+
+      p {
+        color: #555;
+        font-size: 14px;
+        max-width: 500px;
+        letter-spacing: 1px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .schedule {
+    display: flex;
+    flex-direction: row;
+  }
+  .desc {
+    background-color: aliceblue;
+    padding: 12px 10%;
+    border-top: 1px solid #ccc;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctorDetailContainer {
+    .schedule {
+      flex-direction: column;
+    }
+  }
+}

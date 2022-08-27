@@ -1,0 +1,89 @@
+@import "./constant.scss";
+
+.doctorInfoEle {
+  width: 40%;
+  margin-right: 10%;
+
+  .name {
+    font-weight: bold;
+    padding: 3px;
+    font-size: 13px;
+  }
+
+  .address {
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #666;
+    margin: 0;
+    font-size: 14px;
+  }
+  p {
+    font-size: 13px;
+    padding: 3px 0;
+    margin: 0;
+    color: black;
+  }
+
+  .price {
+    margin-top: 10px;
+    padding-top: 10px;
+    border: 1px solid #eee;
+    background-color: #f8f8f8;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 20px;
+      color: #666;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    span {
+      color: $superBlue;
+      padding: 6px 2px;
+      display: inline-block;
+    }
+
+    span:hover {
+      cursor: pointer;
+    }
+
+    .border {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .left {
+        width: 60%;
+        padding: 6px;
+
+        p:first-child {
+          border-bottom: 1px solid #666;
+          display: block;
+        }
+      }
+      .right {
+        width: 30%;
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .doctorInfoEle {
+    width: 80%;
+    margin: 12px 10%;
+
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}

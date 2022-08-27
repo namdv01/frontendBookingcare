@@ -1,0 +1,64 @@
+@import "./constant.scss";
+
+.advertiseSection {
+  margin: 36px 4%;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+    font-weight: 500;
+  }
+
+  .advertiseContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .video {
+      width: 50%;
+      iframe {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .logo {
+      width: 50%;
+      img {
+        width: 180px;
+        height: 50px;
+        display: block;
+        margin: 20px auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .advertiseSection {
+    .advertiseContent {
+      flex-direction: column;
+
+      .video {
+        width: 100%;
+        height: 400px;
+      }
+
+      .logo {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .advertiseSection {
+    .advertiseContent {
+      flex-direction: column;
+
+      .video {
+        height: 320px;
+      }
+    }
+  }
+}

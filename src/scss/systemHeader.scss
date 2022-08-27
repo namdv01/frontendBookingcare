@@ -1,0 +1,139 @@
+@import "./constant.scss";
+
+.systemHeader {
+  display: flex;
+  flex-direction: row;
+  background-color: $primary;
+  align-items: center;
+  padding-right: 24px;
+  justify-content: space-between;
+
+  .leftSystemHeader {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+
+    &__menu {
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+      li {
+        text-align: center;
+        min-width: 16 0px;
+        color: $whiteMiddle;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 14px 16px;
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+      }
+
+      .have-subnav {
+        position: relative;
+      }
+
+      .have-subnav:hover {
+        ul {
+          display: block !important;
+        }
+      }
+    }
+
+    .subnav-sysHeader {
+      border: 1px solid white;
+      position: absolute;
+      top: 100%;
+      // width: 100%;
+      left: -16px;
+      z-index: 10;
+      display: none;
+      background-color: red;
+      flex-direction: column;
+      li {
+        // display: block;
+      }
+    }
+  }
+
+  .rightSystemHeader {
+    .user {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .userName {
+        width: 180px;
+      }
+
+      p:first-child {
+        margin-left: 16px;
+      }
+
+      p:last-child {
+        margin-right: 16px;
+      }
+
+      p {
+        display: inline-block;
+        margin: 0 4px;
+      }
+
+      .menuSys-language {
+        p:hover {
+          cursor: pointer;
+        }
+      }
+
+      .btn-logout:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .systemHeader {
+    .leftSystemHeader {
+      ul {
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .systemHeader {
+    .leftSystemHeader {
+      width: 10%;
+      &__menu {
+        display: block;
+      }
+      ul {
+        display: none;
+        li {
+        }
+      }
+    }
+    .rightSystemHeader {
+      width: 80%;
+
+      .user {
+        float: right;
+      }
+    }
+  }
+}
+
+.activeSystemMenu {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,96 @@
+{
+  "header.specialist": "Chuyên Khoa",
+  "header.health_facilities": "Cơ sở y tế",
+  "header.doctor": "Bác sĩ",
+  "header.examination_service": "Dịch vụ khám",
+  "header_detail.specialist": "Tìm bác sĩ theo chuyên khoa",
+  "header_detail.health_facilities": "Chọn bệnh viện,phòng khám",
+  "header_detail.doctor": "Chọn bác sĩ giỏi",
+  "header_detail.examination_service": "Khám sức khỏe tổng quát",
+
+  "header.category": "Danh mục",
+
+  "support": "Hỗ trợ",
+  "search.title": "NỀN TẢNG Y TẾ",
+  "search.subTitle": "CHĂM SÓC SỨC KHỎE TOÀN DÂN",
+
+  "menu.home": "Trang chủ",
+  "menu.handbook": "Cẩm nang",
+  "menu.contact": "Liên hệ",
+  "menu.role": "Vai trò BookingCare",
+  "menu.frequentQuestion": "Câu hỏi hay gặp",
+  "menu.operatingRegulation": "Quy chế hoạt động",
+  "menu.login": "Đăng nhập",
+
+  "searh_form.specialist": "Tìm chuyên khoa",
+  "searh_form.hospital": "Tìm bệnh viện",
+  "searh_form.reason": "Lý do khám bệnh",
+  "searh_form.doctor": "Tìm bác sĩ",
+  "searh_form.clinic": "Tìm phòng khám",
+
+  "search_suggest.specialist": "Khám chuyên khoa",
+  "search_suggest.medical": "Sản phẩm y tế",
+  "search_suggest.general": "Khám tổng quát",
+  "search_suggest.dental": "Khám nha khoa",
+  "search_suggest.surgery": "Phẫu thuật",
+  "search_suggest.mental": "Sức khỏe tinh thần",
+  "search_suggest.test": "Xét nghiệm",
+
+  "util.seeMore": "xem thêm",
+  "util.find": "tìm kiếm",
+  "util.posts": "Tất cả bài viết",
+
+  "system_header.user": "Người dùng",
+  "system_header.clinic": "Phòng khám",
+  "system_header.specialist": "Chuyên khoa",
+  "system_header.handbook": "Cẩm nang",
+
+  "system_header.user.all": "Tất cả",
+  "system_header.user.doctor": "Hồ sơ bác sĩ",
+  "system_header.user.patient": "Hồ sơ bệnh nhân",
+  "system_header.user.admin": "Hồ sơ người điều hành",
+  "system_header.user.schedule": "Lịch khám bệnh",
+
+  "system_header.helloUser": "Xin chào",
+
+  "system.createUser": "Tạo thành viên mới",
+  "system.editUser": "Sửa thông tin người dùng",
+  "system.save": "Hoàn thành",
+  "system.clearAll": "Xóa toàn bộ",
+
+  "system.email": "Email",
+  "system.fullname": "Họ và tên",
+  "system.password": "Mật khẩu",
+  "system.address": "Địa chỉ",
+  "system.phonenumber": "Số điện thoại",
+  "system.actions": "Thao tác",
+  "system.gender": "Giới tính",
+  "system.role": "Vai trò",
+  "system.position": "Vị trí",
+
+  "system.order": "Số thứ tự",
+  "system.edit": "Thay đổi",
+  "system.remove": "Xóa",
+
+  "system.manage.user": "Quản lý người dùng",
+  "system.manage.addUser": "Thêm thành viên",
+
+  "detailDoctor.schedule": " Lịch Khám Bệnh",
+  "detailDoctor.bookFree": "Chọn và đặt lịch miễn phí",
+
+  "systemManageDoctor.title": "Tạo thêm thông tin người dùng",
+  "systemManageDoctor.chooseDoctor": "Chọn bác sĩ",
+  "systemManageDoctor.introDoctor": "Thông tin giới thiệu",
+  "systemManageDoctor.price": "Chọn giá",
+  "systemManageDoctor.payment": "Chọn phương thức thanh toán",
+  "systemManageDoctor.province": "Chọn tỉnh thành",
+  "systemManageDoctor.nameClinic": "Tên phòng khám",
+  "systemManageDoctor.addressClinic": "Địa chỉ phòng khám",
+  "systemManageDoctor.note": "Ghi chú",
+  "systemManageDoctor.buttonSave": "Lưu thông tin",
+
+  "doctorInfoEle.examinationPrice": "Giá khám",
+  "doctorInfoEle.examinationAddress": "Địa chỉ khám: ",
+  "doctorInfoEle.collapse": "Thu gọn",
+  "doctorInfoEle.seeDetails": "Xem chi tiết"
+}

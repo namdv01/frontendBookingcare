@@ -1,0 +1,78 @@
+@import "./constant.scss";
+
+.suggestSearch__container {
+  padding: 16px 24px;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    li {
+      font-weight: 500;
+      text-shadow: 1px 1px 1px #333;
+      color: $superBlue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 10%;
+      padding: 5px;
+      list-style: none;
+      margin-top: 72px;
+      .img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 4px;
+        background: white;
+        border-radius: 50%;
+        background-image: url(../assets/img/chuyenkhoa.png);
+        background-size: 32px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .text {
+        height: 60px;
+        width: 120px;
+        text-align: center;
+      }
+    }
+
+    li:hover {
+      color: black;
+      text-shadow: 2px white;
+      .img {
+        background-color: $superBlue;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .suggestSearch__container {
+    // margin-top: 60px;
+
+    ul {
+      li {
+        margin-top: 20px;
+        width: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .suggestSearch__container {
+    // margin-top: 20px;
+
+    ul {
+      li {
+        margin-top: 0;
+        width: 25%;
+      }
+    }
+  }
+}

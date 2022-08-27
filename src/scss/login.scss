@@ -1,0 +1,59 @@
+@import "./constant.scss";
+.border-formLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, $blueLogin, $violentLogin);
+  .formLogin {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 18px;
+
+    h1 {
+      text-align: center;
+    }
+
+    input {
+      min-width: 320px;
+    }
+
+    .forgetPassword {
+      color: $blueLogin;
+    }
+
+    .forgetPassword:hover {
+      cursor: pointer;
+      color: $violentLogin;
+    }
+
+    .registerNew {
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+
+      span {
+        color: $blueLogin;
+      }
+
+      span:hover {
+        cursor: pointer;
+        color: $violentLogin;
+      }
+    }
+
+    #btnSubmitLogin {
+      padding: 8px 0;
+      margin: 48px 0 2px;
+      border-radius: 0;
+      background: linear-gradient(to right, $blueLogin, $violentLogin);
+      color: white;
+      font-weight: 600;
+    }
+
+    .registerNew {
+      margin-top: 24px;
+    }
+  }
+}

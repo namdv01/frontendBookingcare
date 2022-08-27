@@ -1,0 +1,107 @@
+@import "./constant.scss";
+
+.footerSection {
+  padding: 36px 4% 72px;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  .leftFooter {
+    width: 50%;
+    img {
+      width: 200px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  .rightFooter {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+
+    .col1 {
+      margin: 0;
+      padding: 0;
+      width: 50%;
+      list-style: none;
+
+      li {
+        padding: 8px 0;
+        color: $superBlue;
+      }
+    }
+
+    .col2 {
+      margin: 0;
+      padding: 0;
+      width: 50%;
+      list-style: none;
+
+      li {
+        padding-bottom: 24px;
+        div {
+          font-weight: bold;
+          font-size: 16px;
+        }
+        p {
+          margin: 0;
+          padding-top: 4px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 4% 0;
+    height: 48px;
+    color: white;
+    background: #64b9e5;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+  .footerSection {
+    flex-direction: column;
+
+    .leftFooter {
+      width: 100%;
+    }
+
+    .rightFooter {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footerSection {
+    flex-direction: column;
+    .leftFooter {
+      width: 100%;
+    }
+
+    .rightFooter {
+      width: 100%;
+      flex-direction: column;
+
+      .col1 {
+        width: 100%;
+        margin: 36px 0;
+      }
+
+      .col2 {
+        width: 100%;
+      }
+    }
+  }
+}

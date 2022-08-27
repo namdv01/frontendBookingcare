@@ -1,0 +1,21 @@
+export const LOGIN = "AUTH_LOGIN";
+export const REGISTER = "AUTH_REGISTER";
+export const BEGIN_STATE = "AUTH_BEGIN_STATE";
+export const BEGIN_LANGUAGE = "BEGIN_LANGUAGE";
+export const TRANSLATE_VN = "TRANSLATE_VN";
+export const TRANSLATE_EN = "TRANSLATE_EN";
+export const LOGOUT = "AUTH_LOGOUT";
+
+export const GET_ALL_USER = "GET_ALL_USER";
+export const CREATE_NEW_USER = "CREATE_NEW_USER";
+export const DELETE_USER = "DELETE_USER";
+export const EDIT_USER = "EDIT_USER";
+
+export const GET_ALL_GENDER = "GET_ALL_GENDER";
+export const GET_ALL_ROLE = "GET_ALL_ROLE";
+export const GET_ALL_POSITION = "GET_ALL_POSITION";
+export const GET_LIMIT_DOCTOR = "GET_LIMIT_DOCTOR";
+export const GET_ALL_DOCTOR = "GET_ALL_DOCTOR";
+export const POST_DETAIL_DOCTOR = "POST_DETAIL_DOCTOR";
+export const GET_CODE_DOCTOR_INFO = "GET_CODE_DOCTOR_INFO";
+export const GET_DOCTOR_INFO = "GET_DOCTOR_INFO";

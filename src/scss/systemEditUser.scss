@@ -1,0 +1,55 @@
+@import "./constant.scss";
+
+.systemEditUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 0 10%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($color: #ccc, $alpha: 0.5);
+  form {
+    background-color: white;
+
+    .title {
+      background-color: orange;
+      padding: 16px 12px;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      position: relative;
+      text-transform: uppercase;
+
+      .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+
+      .close:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+    .btns {
+      width: 90%;
+      margin: 12px 5%;
+      display: flex;
+      flex-direction: row;
+      float: right;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .systemEditUser {
+    width: 90%;
+    padding: 0 5%;
+  }
+}
