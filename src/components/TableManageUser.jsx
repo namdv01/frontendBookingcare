@@ -189,20 +189,6 @@ const TableManageUser = (props) => {
                 >
                   {<FormattedMessage id="system.remove" />}
                 </Button>
-                {/* <ImPencil
-                  className="iconEditUser"
-                  color="orange"
-                  size="18"
-                  style={{ marginRight: "16px", padding: "8px" }}
-                  onClick={(e) => editUser(e, item.id, item.fullName)}
-                /> */}
-                {/* <ImBin2
-                  className="iconRemoveUser"
-                  color="red"
-                  size="18"
-                  style={{ padding: "8px" }}
-                  onClick={(e) => removeUser(e, item.id, item.fullName)}
-                /> */}
               </div>
             </div>
           );

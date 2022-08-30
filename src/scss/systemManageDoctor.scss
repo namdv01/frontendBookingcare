@@ -34,15 +34,18 @@
   .centerContent {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 100%;
     margin-bottom: 12px;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     .price,
     .payment,
-    .province {
+    .province,
+    .specialist,
+    .clinic {
       width: 30%;
+      margin: 12px 0;
     }
   }
 

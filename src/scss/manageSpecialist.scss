@@ -1,0 +1,57 @@
+@import "./constant.scss";
+
+.manageSpecialist {
+  margin: 24px 5%;
+  width: 90%;
+  h2 {
+    text-align: center;
+    margin: 8px 0 24px;
+    text-transform: uppercase;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .name {
+      width: 30%;
+
+      h4 {
+        margin: 0;
+        font-weight: 500;
+      }
+    }
+
+    .img {
+      width: 30%;
+
+      h4 {
+        margin: 0;
+        font-weight: 500;
+      }
+    }
+
+    .oldSpecialist {
+      width: 30%;
+
+      h4 {
+        margin: 0 0 8px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .btnBorder {
+    margin: 16px 0;
+    float: right;
+
+    button {
+      padding: 8px 12px;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+  }
+}

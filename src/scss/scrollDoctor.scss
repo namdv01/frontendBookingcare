@@ -1,0 +1,54 @@
+@import "./constant.scss";
+
+.scrollDoctor {
+  .title {
+    padding: 12px 0;
+    background-color: $superBlue;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    .iconRollback {
+      padding: 0 6px;
+      margin: 0 8px;
+    }
+    .iconRollback:hover {
+      cursor: pointer;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 12px;
+
+    .scrollDoctor__item {
+      display: flex;
+      flex-direction: row;
+      margin: 8px 0;
+      border-bottom: 1px solid #333;
+
+      img {
+        height: 160px;
+        width: 160px;
+        padding: 0 0 16px;
+        border-radius: 50%;
+      }
+
+      .name {
+        font-size: 20px;
+        color: $greyLight;
+        padding-left: 16px;
+        padding-top: 4px;
+      }
+    }
+
+    .scrollDoctor__item:hover {
+      cursor: pointer;
+    }
+  }
+}

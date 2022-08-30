@@ -6,7 +6,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { FormattedMessage } from "react-intl";
 import { ToastContainer, toast } from "react-toastify";
 import {
+  getAllClinic,
   getAllDoctors,
+  getAllSpecialist,
   getCodeDoctorInfo,
   getDoctorInfo,
   postDetailDoctor,
@@ -15,6 +17,10 @@ import {
 const SystemManageDoctor = () => {
   const options = useSelector((state) => state.userSystemReducer.allDoctors);
   const codes = useSelector((state) => state.userSystemReducer.codeDoctorInfo);
+  const allSpecialist = useSelector(
+    (state) => state.userSystemReducer.allSpecialist
+  );
+  const allClinic = useSelector((state) => state.userSystemReducer.allClinic);
   const doctorInfos = useSelector(
     (state) => state.userSystemReducer.doctorInfo
   );
@@ -27,11 +33,13 @@ const SystemManageDoctor = () => {
     doctorOption: null,
     idDoctorOption: null,
     priceOption: null,
+    paymentOption: null,
+    provinceOption: null,
+    specialistOption: null,
+    clinicOption: null,
     listPrice: [],
     listPayment: [],
     listProvince: [],
-    paymentOption: null,
-    provinceOption: null,
     introDoctor: "",
     markdown: {
       contentHTML: "",
@@ -58,6 +66,8 @@ const SystemManageDoctor = () => {
       textValue.markdown.contentHTML != "" &&
       textValue.markdown.contentText != "" &&
       textValue.priceOption != null &&
+      textValue.specialistOption != null &&
+      textValue.clinicOption != null &&
       textValue.provinceOption != null &&
       textValue.paymentOption != null &&
       textValue.nameClinic != "" &&
@@ -74,6 +84,8 @@ const SystemManageDoctor = () => {
             priceId: textValue.priceOption,
             provinceId: textValue.provinceOption,
             paymentId: textValue.paymentOption,
+            specialtyId: textValue.specialistOption,
+            clinicId: textValue.clinicOption,
             nameClinic: textValue.nameClinic,
             addressClinic: textValue.addressClinic,
             note: textValue.noteClinic,
@@ -101,6 +113,8 @@ const SystemManageDoctor = () => {
   useEffect(() => {
     dispatch(getAllDoctors());
     dispatch(getCodeDoctorInfo());
+    dispatch(getAllSpecialist());
+    dispatch(getAllClinic());
   }, []);
 
   const updateState = () => {
@@ -178,6 +192,8 @@ const SystemManageDoctor = () => {
                 priceOption: e.idInfoData.priceId,
                 provinceOption: e.idInfoData.provinceId,
                 paymentOption: e.idInfoData.paymentId,
+                specialistOption: e.idInfoData.specialtyId,
+                clinicOption: e.idInfoData.clinicId,
               });
               // callDetail(e.value);
             }}
@@ -264,6 +280,52 @@ const SystemManageDoctor = () => {
               });
             }}
             options={textValue.listProvince}
+          />
+        </div>
+        <div className="specialist">
+          <FormattedMessage id="systemManageDoctor.specialist" />
+          <Select
+            value={{
+              label: allSpecialist.find(
+                (item) => item.value == textValue.specialistOption
+              )?.label,
+              value: textValue.specialistOption,
+            }}
+            placeholder={
+              <>
+                <FormattedMessage id="systemManageDoctor.price" /> ...
+              </>
+            }
+            onChange={(e) => {
+              setTextValue({
+                ...textValue,
+                specialistOption: e.value,
+              });
+            }}
+            options={allSpecialist}
+          />
+        </div>
+        <div className="clinic">
+          <FormattedMessage id="systemManageDoctor.clinic" />
+          <Select
+            value={{
+              label: allClinic.find(
+                (item) => item.value == textValue.clinicOption
+              )?.label,
+              value: textValue.clinicOption,
+            }}
+            placeholder={
+              <>
+                <FormattedMessage id="systemManageDoctor.clinic" /> ...
+              </>
+            }
+            onChange={(e) => {
+              setTextValue({
+                ...textValue,
+                clinicOption: e.value,
+              });
+            }}
+            options={allClinic}
           />
         </div>
       </div>

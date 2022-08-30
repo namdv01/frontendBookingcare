@@ -30,6 +30,10 @@ const Header = () => {
     navigate("/");
   };
 
+  const navigatePage = (e, item) => {
+    navigate(item);
+  };
+
   return (
     <div className="headerContainer">
       <div className="header">
@@ -41,7 +45,10 @@ const Header = () => {
         <ul className="centerHeader">
           {menuHeader.map((item, index) => {
             return (
-              <li key={`menu-item-${index}`}>
+              <li
+                key={`menu-item-${index}`}
+                onClick={(e) => navigatePage(e, item)}
+              >
                 <FormattedMessage id={`header.${item}`} />
                 <span>
                   <FormattedMessage id={`header_detail.${item}`} />

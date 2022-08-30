@@ -11,6 +11,10 @@ import {
   GET_CODE_DOCTOR_INFO,
   POST_DETAIL_DOCTOR,
   GET_DOCTOR_INFO,
+  POST_NEW_SPECIALIST,
+  GET_ALL_SPECIALIST,
+  GET_ALL_CLINIC,
+  POST_NEW_CLINIC,
 } from "./constants";
 import { systemInitState } from "./reducer";
 
@@ -61,6 +65,23 @@ const userSystemReducer = (state = systemInitState, action) => {
       state.doctorInfo = action.payload;
       return { ...state };
 
+    case POST_NEW_SPECIALIST:
+      return {
+        ...state,
+        allSpecialist: [...state.allSpecialist, action.payload],
+      };
+
+    case GET_ALL_SPECIALIST:
+      return { ...state, allSpecialist: action.payload };
+
+    case POST_NEW_CLINIC:
+      return {
+        ...state,
+        allClinic: [...state.allClinic, action.payload],
+      };
+
+    case GET_ALL_CLINIC:
+      return { ...state, allClinic: action.payload };
     default:
       return state;
   }

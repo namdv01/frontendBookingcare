@@ -1,5 +1,7 @@
 export const BACKEND_API =
-  process.env.NODE_ENV !== "production" ? "http://localhost:3002" : "";
+  process.env.NODE_ENV !== "production"
+    ? "http://nam-bookingcare.herokuapp.com"
+    : "https://nam-bookingcare.herokuapp.com";
 
 export const menuHeader = [
   "specialist",

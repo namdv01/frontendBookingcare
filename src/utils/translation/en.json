@@ -67,6 +67,12 @@
   "system.gender": "Gender",
   "system.role": "Role",
   "system.position": "Position",
+  "system.reason": "Reason examination",
+  "system.birthday": "Birthday",
+  "system.birthdayPlaceholder": "day/month/year",
+  "system.createnewScheduleExamination": "New schedule examination",
+  "system.btnCreateExamination": "Create examination",
+  "system.btnRemoveExamination": "Remove all field",
 
   "system.order": "Order",
   "system.edit": "Edit",
@@ -92,5 +98,15 @@
   "doctorInfoEle.examinationPrice": "Examination price",
   "doctorInfoEle.examinationAddress": "Examination address: ",
   "doctorInfoEle.collapse": "Collapse",
-  "doctorInfoEle.seeDetails": "See details"
+  "doctorInfoEle.seeDetails": "See details",
+
+  "manageSpecialist.title": "Manage Specialist",
+  "manageSpecialist.img": "Choose image",
+  "manageSpecialist.name": "Name specialist",
+
+  "specialist": "Popular specialty",
+  "clinic": "Health facilities",
+  "doctor": "Outstanding doctor",
+  "handbook": "Handbook",
+  "advert": "Media talk about Bookingcare"
 }

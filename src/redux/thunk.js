@@ -15,6 +15,10 @@ import {
   POST_DETAIL_DOCTOR,
   GET_CODE_DOCTOR_INFO,
   GET_DOCTOR_INFO,
+  POST_NEW_SPECIALIST,
+  GET_ALL_SPECIALIST,
+  POST_NEW_CLINIC,
+  GET_ALL_CLINIC,
 } from "./constants";
 import { BACKEND_API } from "../utils/constant";
 import configHeaderToken from "../utils/axios";
@@ -309,6 +313,84 @@ export const getDoctorInfo = (value) => {
       if (result.success) {
         dispatch({ type: GET_DOCTOR_INFO, payload: result.result });
         console.log(result);
+        return true;
+      }
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  };
+};
+
+export const postNewSpecialist = (value) => {
+  return async (dispatch, getState) => {
+    try {
+      const result = await axios
+        .post(`${BACKEND_API}/service/createSpecialist`, value)
+        .then((res) => res.data);
+      if (result.success) {
+        dispatch({ type: POST_NEW_SPECIALIST, payload: result.specialist });
+        return true;
+      }
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  };
+};
+
+export const getAllSpecialist = () => {
+  return async (dispatch, getState) => {
+    try {
+      const result = await axios
+        .get(`${BACKEND_API}/service/getAllSpecialist`)
+        .then((res) => res.data);
+      if (result.success) {
+        dispatch({
+          type: GET_ALL_SPECIALIST,
+          payload: result.specialist.map((item) => {
+            return { ...item, label: item.name, value: item.id };
+          }),
+        });
+        return true;
+      }
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  };
+};
+
+export const postNewClinic = (value) => {
+  return async (dispatch, getState) => {
+    try {
+      const result = await axios
+        .post(`${BACKEND_API}/service/createClinic`, value)
+        .then((res) => res.data);
+      if (result.success) {
+        dispatch({ type: POST_NEW_CLINIC, payload: result.clinic });
+        return true;
+      }
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  };
+};
+
+export const getAllClinic = () => {
+  return async (dispatch, getState) => {
+    try {
+      const result = await axios
+        .get(`${BACKEND_API}/service/getAllClinic`)
+        .then((res) => res.data);
+      if (result.success) {
+        dispatch({
+          type: GET_ALL_CLINIC,
+          payload: result.clinic.map((item) => {
+            return { ...item, label: item.name, value: item.id };
+          }),
+        });
         return true;
       }
     } catch (error) {

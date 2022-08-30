@@ -27,13 +27,15 @@ const testInitState = {
 
 const systemInitState = {
   users: [],
-  genders: {},
+  genders: [],
   roles: {},
   positions: {},
   doctors: [],
   allDoctors: [],
   codeDoctorInfo: [],
   doctorInfo: {},
+  allSpecialist: [],
+  allClinic: [],
 };
 
 const rootReducer = combineReducers({

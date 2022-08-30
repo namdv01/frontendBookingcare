@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,6 +6,9 @@ import "../scss/specialist.scss";
 import img from "../assets/img/specialist.jpg";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { FormattedMessage } from "react-intl";
+import { useSelector, useDispatch } from "react-redux";
+import { getAllSpecialist } from "../redux/thunk";
+import { useNavigate } from "react-router-dom";
 
 const Specialist = () => {
   const ArrowLeft = ({ currentSlide, slideCount, ...props }) => {
@@ -15,6 +18,16 @@ const Specialist = () => {
   const ArrowRight = ({ currentSlide, slideCount, ...props }) => {
     return <AiOutlineRight {...props} size="24" color="#959595" />;
   };
+
+  const allspecialist = useSelector(
+    (state) => state.userSystemReducer.allSpecialist
+  );
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    dispatch(getAllSpecialist());
+  }, []);
 
   const settings = {
     infinite: true,
@@ -49,45 +62,37 @@ const Specialist = () => {
     nextArrow: <ArrowRight />,
   };
 
+  const navigateDetail = (e, item) => {
+    navigate(`specialty/${item.id}`);
+  };
+
+  const navigateScroll = (e) => {
+    navigate("specialist");
+  };
+
   return (
     <div className="specialistBorder" style={{ marginBottom: "40px" }}>
       <h2>
-        Chuyên khoa phổ biến
-        <span>
+        <FormattedMessage id="specialist" />
+        <span onClick={navigateScroll}>
           <FormattedMessage id="util.seeMore" />
         </span>
       </h2>
 
       <div className="specialistSection">
         <Slider {...settings}>
-          <div className="slide-item-specialist">
-            <img src={img} alt="" />
-            <h3>Cơ xương khớp</h3>
-          </div>
-          <div className="slide-item-specialist">
-            <img src={img} alt="" />
-            <h3>Cơ xương khớp</h3>
-          </div>
-          <div className="slide-item-specialist">
-            <img src={img} alt="" />
-            <h3>Cơ xương khớp</h3>
-          </div>
-          <div className="slide-item-specialist">
-            <img src={img} alt="" />
-            <h3>Cơ xương khớp</h3>
-          </div>
-          <div className="slide-item-specialist">
-            <img src={img} alt="" />
-            <h3>Cơ xương khớp</h3>
-          </div>
-          <div className="slide-item-specialist">
-            <img src={img} alt="" />
-            <h3>Cơ xương khớp</h3>
-          </div>
-          <div className="slide-item-specialist">
-            <img src={img} alt="" />
-            <h3>Cơ xương khớp</h3>
-          </div>
+          {allspecialist.map((item, i) => {
+            return (
+              <div
+                onClick={(e) => navigateDetail(e, item)}
+                key={`specialist-item-${i}`}
+                className="slide-item-specialist"
+              >
+                <img src={item.image} alt="" />
+                <h3>{item.name}</h3>
+              </div>
+            );
+          })}
         </Slider>
       </div>
     </div>

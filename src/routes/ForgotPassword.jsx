@@ -6,6 +6,7 @@ import SystemCreateUser from "../components/SystemCreateUser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MarkDown from "../components/MarkDown";
+import FormBookingExamination from "../components/FormBookingExamination";
 
 const ForgotPassword = () => {
   const number = useSelector((state) => state.testReducer.number);
@@ -24,7 +25,8 @@ const ForgotPassword = () => {
 
   return (
     <div style={{ width: "80%", margin: "10px auto" }}>
-      <MarkDown />
+      {/* <MarkDown /> */}
+      <FormBookingExamination />
       {/* <button onClick={notify}>Notify!</button> */}
       {/* <ToastContainer></ToastContainer> */}
       {/* <ToastContainer

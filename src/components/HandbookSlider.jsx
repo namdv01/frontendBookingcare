@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Handbook from "./Handbook";
 import "../scss/handbookSlider.scss";
 import { FormattedMessage } from "react-intl";
+import { useNavigate } from "react-router-dom";
 
 const HandbookSlider = () => {
   const ArrowLeft = ({ currentSlide, slideCount, ...props }) => {
@@ -15,6 +16,8 @@ const HandbookSlider = () => {
   const ArrowRight = ({ currentSlide, slideCount, ...props }) => {
     return <AiOutlineRight {...props} size="24" color="#959595" />;
   };
+
+  const navigate = useNavigate();
 
   const settings = {
     infinite: true,
@@ -37,11 +40,15 @@ const HandbookSlider = () => {
     nextArrow: <ArrowRight />,
   };
 
+  const navigateScroll = (e) => {
+    navigate("handbook");
+  };
+
   return (
     <div className="handbookBorder" style={{ marginBottom: "40px" }}>
       <h2>
-        Cẩm nang
-        <span>
+        <FormattedMessage id="handbook" />
+        <span onClick={navigateScroll}>
           <FormattedMessage id="util.posts" />
         </span>
       </h2>

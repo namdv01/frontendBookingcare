@@ -8,11 +8,36 @@ import "../scss/detailScheduleTime.scss";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FormattedMessage } from "react-intl";
 import { BsFillHandIndexThumbFill } from "react-icons/bs";
+import FormBookingExamination from "./FormBookingExamination";
 
 const DetailScheduleTime = (props) => {
+  const checkToDay = (value) => {
+    const d1 = moment(value).format("DD/MM");
+    const d2 = moment(new Date()).format("DD/MM");
+    if (d1 == d2) {
+      if (isVietNam)
+        return {
+          check: true,
+          value: `Hôm nay - ${d1}`,
+        };
+      else
+        return {
+          check: true,
+          value: `Today - ${d1}`,
+        };
+    } else
+      return {
+        check: false,
+        value,
+      };
+  };
   const [schedule, setSchedule] = useState([]);
   const [time, setTime] = useState([]);
   const isVietNam = useSelector((state) => state.translateReducer.isVietNamese);
+  const [openTab, setOpenTab] = useState(false);
+  const [timeChoose, setTimeChoose] = useState("");
+  const [timeChooseValue, setTimeChooseValue] = useState("");
+  const [scheduleChoose, setScheduleChoose] = useState("");
 
   useEffect(() => {
     const callDetailDoctor = async () => {
@@ -36,7 +61,25 @@ const DetailScheduleTime = (props) => {
     callDetailDoctor();
   }, []);
 
+  useEffect(() => {
+    setScheduleChoose(
+      checkToDay(schedule[0]?.date).check
+        ? checkToDay(schedule[0]?.date).value
+        : isVietNam
+        ? firstLetterUpperCase(moment(schedule[0]?.date).format("dddd DD/MM"))
+        : moment(schedule[0]?.date).locale("en").format("dddd DD/MM")
+    );
+  }, [isVietNam]);
+
   const getDate = async (e) => {
+    const date = checkToDay(e.target.value).check
+      ? checkToDay(e.target.value).value
+      : isVietNam
+      ? firstLetterUpperCase(moment(e.target.value).format("dddd DD/MM"))
+      : moment(e.target.value).locale("en").format("dddd DD/MM");
+    console.log(date);
+
+    setScheduleChoose(date);
     try {
       const result = await axios
         .post(`${BACKEND_API}/doctor/getScheduleOndayDoctor`, {
@@ -56,29 +99,21 @@ const DetailScheduleTime = (props) => {
     return str[0].toUpperCase() + str.slice(1);
   };
 
-  const checkToDay = (value) => {
-    const d1 = moment(value).format("DD/MM");
-    const d2 = moment(new Date()).format("DD/MM");
-    if (d1 == d2) {
-      if (isVietNam)
-        return {
-          check: true,
-          value: `Hôm nay - ${d1}`,
-        };
-      else
-        return {
-          check: true,
-          value: `Today - ${d1}`,
-        };
-    } else
-      return {
-        check: false,
-        value,
-      };
-  };
-
   return (
     <div className="detailScheduleTime">
+      {openTab ? (
+        <FormBookingExamination
+          openTab={openTab}
+          setOpenTab={setOpenTab}
+          timeChoose={timeChoose}
+          timeChooseValue={timeChooseValue}
+          scheduleChoose={scheduleChoose}
+          doctorDetail={props.doctorDetail}
+          notify={props.notify}
+        ></FormBookingExamination>
+      ) : (
+        <></>
+      )}
       <select name="" id="" onChange={getDate}>
         {schedule.map((item, index) => {
           return (
@@ -105,7 +140,16 @@ const DetailScheduleTime = (props) => {
         <div className="times">
           {time.map((item, index) => {
             return item.timeType ? (
-              <div className="time">
+              <div
+                className="time"
+                onClick={(e) => {
+                  setOpenTab(true);
+                  setTimeChoose(
+                    isVietNam ? item.timeData.valueVi : item.timeData.valueEn
+                  );
+                  setTimeChooseValue(item.timeType);
+                }}
+              >
                 {isVietNam ? item.timeData.valueVi : item.timeData.valueEn}
               </div>
             ) : (

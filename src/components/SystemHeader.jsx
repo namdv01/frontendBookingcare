@@ -58,6 +58,10 @@ const SystemHeader = () => {
     if (auth.isLogin) getOwnUser();
   }, []);
 
+  const navigatePage = (e, link) => {
+    navigate(link);
+  };
+
   return (
     <div className="systemHeader">
       <div className="leftSystemHeader">
@@ -76,7 +80,10 @@ const SystemHeader = () => {
         <ul>
           {systemHeader.map((item, i) => {
             return typeof item == "string" ? (
-              <li key={`systemHeader-item${i}`}>
+              <li
+                key={`systemHeader-item${i}`}
+                onClick={(e) => navigatePage(e, item)}
+              >
                 <FormattedMessage id={`system_header.${item}`} />
               </li>
             ) : (

@@ -16,6 +16,13 @@ import SystemManageDoctor from "./SystemManageDoctor";
 import DoctorDetail from "./DoctorDetail";
 import Homepage from "./Homepage";
 import ScheduleManage from "./ScheduleManage";
+import ManageSpecialist from "./ManageSpecialist";
+import SpecialistDetail from "./SpecialistDetail";
+import ClinicDetail from "./ClinicDetail";
+import ScrollSpecialist from "./ScrollSpecialist";
+import ScrollClinic from "./ScrollClinic";
+import ScrollDoctor from "./ScrollDoctor";
+import Fixxing from "./Fixxing";
 
 function App() {
   const translate = useSelector((state) => state.translateReducer);
@@ -33,6 +40,15 @@ function App() {
             <Route path="/" element={<Home />}>
               <Route index element={<Homepage />} />
               <Route path="doctor/:idDoctor" element={<DoctorDetail />} />
+              {/*  */}
+              <Route path="specialty/:idSpecialty" element={<Fixxing />} />
+              <Route path="clinic/:idClinic" element={<Fixxing />} />
+              {/*  */}
+              <Route path="specialist" element={<ScrollSpecialist />} />
+              <Route path="doctor" element={<ScrollDoctor />} />
+              <Route path="health_facilities" element={<ScrollClinic />} />
+              <Route path="examination_service" element={<Fixxing />} />
+              <Route path="handbook" element={<Fixxing />} />
             </Route>
             <Route path="system" element={<System />}>
               <Route path="user-manage" element={<UserManageSys />} />
@@ -41,7 +57,7 @@ function App() {
               <Route path="admin-manage" element={<UserManageSys />} />
               <Route path="schedule-manage" element={<ScheduleManage />} />
               <Route path="clinic" element={<div>trang phòng khám</div>} />
-              <Route path="specialist" element={<div>trang chuyên khoa</div>} />
+              <Route path="specialist" element={<ManageSpecialist />} />
               <Route path="*" element={<NotFound />} />
               <Route path="handbook" element={<div>trang cẩm nang</div>} />
             </Route>

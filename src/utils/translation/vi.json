@@ -67,6 +67,12 @@
   "system.gender": "Giới tính",
   "system.role": "Vai trò",
   "system.position": "Vị trí",
+  "system.reason": "Lý do khám",
+  "system.birthday": "Ngày sinh",
+  "system.birthdayPlaceholder": "Ngày / tháng / năm",
+  "system.createnewScheduleExamination": "Tạo lịch khám bệnh",
+  "system.btnCreateExamination": "Tạo lịch",
+  "system.btnRemoveExamination": "Loại bỏ toàn bộ thông tin",
 
   "system.order": "Số thứ tự",
   "system.edit": "Thay đổi",
@@ -92,5 +98,15 @@
   "doctorInfoEle.examinationPrice": "Giá khám",
   "doctorInfoEle.examinationAddress": "Địa chỉ khám: ",
   "doctorInfoEle.collapse": "Thu gọn",
-  "doctorInfoEle.seeDetails": "Xem chi tiết"
+  "doctorInfoEle.seeDetails": "Xem chi tiết",
+
+  "manageSpecialist.title": "Quản lý chuyên khoa",
+  "manageSpecialist.img": "Chọn hình ảnh",
+  "manageSpecialist.name": "Tên chuyên khoa",
+
+  "specialist": "Chuyên khoa phổ biển",
+  "clinic": "Cơ sở y tế",
+  "doctor": "Bác sĩ nổi bật",
+  "handbook": "Cẩm nang",
+  "advert": "Truyền thông nói về BookingCare"
 }

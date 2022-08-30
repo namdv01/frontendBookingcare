@@ -63,11 +63,13 @@ const DoctorSection = () => {
     navigate(`/doctor/${idDoctor}`);
   };
 
+  const navigateScroll = (e) => navigate("doctor");
+
   return (
     <div className="doctorSectionBorder" style={{ marginBottom: "40px" }}>
       <h2>
-        Bác sĩ nổi bật
-        <span>
+        <FormattedMessage id="doctor" />
+        <span onClick={navigateScroll}>
           <FormattedMessage id="util.find" />
         </span>
       </h2>

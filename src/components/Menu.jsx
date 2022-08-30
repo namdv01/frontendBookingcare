@@ -4,10 +4,16 @@ import { TRANSLATE_EN, TRANSLATE_VN } from "../redux/constants";
 import { FormattedMessage } from "react-intl";
 import { menuHeader } from "../utils/constant";
 import "../scss/menu.scss";
+import { useNavigate } from "react-router-dom";
 
 const Menu = (props) => {
   const closeMenu = (e) => {
     props.toggleMenu(e);
+  };
+
+  const navigate = useNavigate();
+  const navigatePage = (e, item) => {
+    navigate(item);
   };
 
   const languageVN = useSelector(
@@ -94,7 +100,11 @@ const Menu = (props) => {
 
         {menuHeader.map((item, index) => {
           return (
-            <li className="menu-category-item" key={`menu-item-${index}`}>
+            <li
+              className="menu-category-item"
+              key={`menu-item-${index}`}
+              onClick={(e) => navigatePage(e, item)}
+            >
               <FormattedMessage id={`header.${item}`} />
             </li>
           );
